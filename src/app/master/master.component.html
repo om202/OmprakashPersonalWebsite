@@ -1,0 +1,52 @@
+<div class="container-fluid" id="master">
+  <div class="row">
+    <!-- terminal bar -->
+    <!-- <div class="col-7"> -->
+      <div #terminalbar class="mt-2" id="terminal-bar">
+        <div class="row">
+          <!-- username -->
+          <div id="terminal-bar-username">
+            <p id="terminal-bar-text">om@web-dev</p>
+          </div>
+
+          <!-- dollar -->
+          <div id="terminal-bar-dollar">
+            <span class="little-triangle"></span>
+            <p id="terminal-bar-text">$</p>
+          </div>
+
+          <!-- folder -->
+          <div id="terminal-bar-folder">
+            <span class="little-triangle"></span>
+            <p id="terminal-bar-text">~/om</p>
+          </div>
+
+          <!-- main -->
+          <div id="terminal-bar-main">
+            <span class="little-triangle"></span>
+            <p id="terminal-bar-text">
+              <img src="../../assets/icons/git-branch-svgrepo-com.svg" id="git-branch">
+              main</p>
+          </div>
+
+          <div id="terminal-bar-end">
+            <span class="little-triangle"></span>
+            <div class="cursor">
+              <input id="terminal-bar-text" class="hidden-input enter-only" autofocus type="text" (keydown.enter)="onKeyPress($event)">
+              <p id="terminal-bar-text" class="terminalBarEndText" #terminalBarEndText >Welcome! Press Enter...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+    <!-- menu bar -->
+  </div>
+  <div #info1 style="display:none;">
+    <p>
+      >>> Who am I? <br>
+      >>> My name is Omprakash Sah Kanu. I do full stack development with angular. <br>
+      >>> << Press Enter >>
+    </p>
+  </div>
+  <div #terminalbar2></div>
+</div>

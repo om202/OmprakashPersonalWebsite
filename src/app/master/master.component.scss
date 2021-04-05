@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+$dark: #20201c;
+$green-gray: #598489;
+$pink: #ff578f;
+$skyblue: #44aae6;
+$yellow-ochere: #e89440;
+$white1: rgb(228, 226, 226);
+$white2: rgb(185, 182, 182);
+
+
+
+#master {
+  height: 100vh;
+  background-color: $dark;
+  color: $white2;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.2rem;
+}
+
+#terminal-bar {
+  color: $white1;
+}
+
+.little-triangle {
+  display: inline-block;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+}
+
+#terminal-bar-username, #terminal-bar-dollar, #terminal-bar-folder, #terminal-bar-main {
+  height: 1.7rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-right: 1rem;
+}
+
+#terminal-bar-username {
+  background-color: $green-gray;
+}
+
+#terminal-bar-dollar {
+  background-color: $pink;
+}
+
+#terminal-bar-dollar > .little-triangle {
+  border-left: 16px solid $green-gray;
+  width: 1rem;
+}
+
+#terminal-bar-folder {
+  background-color: $skyblue;
+}
+
+#terminal-bar-folder > .little-triangle {
+  border-left: 16px solid $pink;
+}
+
+#terminal-bar-main {
+  background-color: $yellow-ochere;
+}
+
+#terminal-bar-main > .little-triangle {
+  border-left: 16px solid $skyblue;
+}
+
+#terminal-bar-end {
+  height: 1.7rem;
+}
+
+#terminal-bar-end >.cursor> #terminal-bar-text {
+  color: $white2;
+}
+
+#git-branch {
+  filter: invert(90%);
+}
+
+#terminal-bar-end > .little-triangle {
+  position: absolute;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 16px solid $yellow-ochere;
+}
+
+
+#terminal-bar-text {
+  line-height: 1.1rem;
+  float: right;
+  margin-left: 1rem;
+}
+
+///////// blining cursor ////////////
+
+.cursor {
+  margin-left: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.cursor::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  display: block;
+  background-color: #606060;
+  width: 12px;
+  height: 1.7rem;
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+// blinking cursor ends
+
+.hidden-input {
+  background-color: inherit;
+  border-style: none;
+  caret-color: transparent;
+}
+
+.enter-only {
+  // width: 0px;
+}
+
+
+
